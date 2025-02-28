@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamTitulo">20sp</dimen>
+    <dimen name="tamLabel">15sp</dimen>
+    <dimen name="tamInput">15sp</dimen>
+    <dimen name="paddingTitulo">20dp</dimen>
+    <dimen name="paddingFormControl">10dp</dimen>
+    <dimen name="marginFormControl">5dp</dimen>
+</resources>
