@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculo_salario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculoSalario"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/paddingTitulo"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/lbTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcSalTitulo"
+                android:textSize="@dimen/tamTitulo"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/paddingFormControl">
+
+            <TextView
+                android:id="@+id/lbNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcSalInNombre"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/calcSalPlaceholderNombre"
+                android:textSize="@dimen/tamInput"
+                android:maxLength="50"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/paddingFormControl">
+
+            <TextView
+                android:id="@+id/lbSalarioBase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcSalInSalBase"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtSalBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/calcSalPlaceholderSalBase"
+                android:textSize="@dimen/tamInput"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcular" />
+            <Button
+                android:id="@+id/btnBorrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/borrar"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbRenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcSalRenta"
+                android:textSize="@dimen/tamLabel" />
+
+            <EditText
+                android:id="@+id/txtRenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/calcSalVacio"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbAFP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcSalAFP"
+                android:textSize="@dimen/tamLabel" />
+
+            <EditText
+                android:id="@+id/txtAFP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/calcSalVacio"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+
+            <TextView
+                android:id="@+id/lbISSS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcSalISSS"
+                android:textSize="@dimen/tamLabel" />
+
+            <EditText
+                android:id="@+id/txtISSS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/calcSalVacio"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+
+            <TextView
+                android:id="@+id/lbSalarioNeto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcSalNeto"
+                android:textSize="@dimen/tamLabel" />
+
+            <EditText
+                android:id="@+id/txtSalarioNeto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/calcSalVacio"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:enabled="false"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

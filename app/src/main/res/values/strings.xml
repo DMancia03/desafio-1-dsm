@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Desafío 1 DSM</string>
+    <!-- Calculo de salario -->
+    <string name="calcSalTitulo">Descuentos de salario</string>
+    <string name="calcSalInNombre">Nombre:</string>
+    <string name="calcSalPlaceholderNombre">Ingresa tu nombre...</string>
+    <string name="calcSalInSalBase">Salario base:</string>
+    <string name="calcSalPlaceholderSalBase">Ingresa tu salario base...</string>
+    <string name="calcSalRenta">Descuento de renta:</string>
+    <string name="calcSalAFP">Descuento de AFP:</string>
+    <string name="calcSalISSS">Descuento de ISSS:</string>
+    <string name="calcSalNeto">Salario neto:</string>
+    <string name="calcSalVacio">...</string>
+    <string name="calcular">Calcular</string>
+    <string name="borrar">Borrar</string>
 </resources>
