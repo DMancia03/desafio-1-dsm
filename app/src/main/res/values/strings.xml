@@ -15,4 +15,19 @@
     <string name="borrar">Borrar</string>
     <!-- Calculo de promedio -->
     <string name="calcPromTitulo">Promedio de notas</string>
+    <string name="calcPromInNombre">Nombre:</string>
+    <string name="calcPromPlaceholderNombre">Ingresa tu nombre...</string>
+    <string name="calcPromLbNota1">Nota 1:</string>
+    <string name="calcPromPhNota1">Ingresa tu nota...</string>
+    <string name="calcPromLbNota2">Nota 2:</string>
+    <string name="calcPromPhNota2">Ingresa tu nota...</string>
+    <string name="calcPromLbNota3">Nota 3:</string>
+    <string name="calcPromPhNota3">Ingresa tu nota...</string>
+    <string name="calcPromLbNota4">Nota 4:</string>
+    <string name="calcPromPhNota4">Ingresa tu nota...</string>
+    <string name="calcPromLbNota5">Nota 5:</string>
+    <string name="calcPromPhNota5">Ingresa tu nota...</string>
+    <string name="calcPromLbPromedio">Promedio:</string>
+    <string name="calcPromLbEstadoAprobacion">Aprobó:</string>
+    <string name="calcPromVacio">...</string>
 </resources>

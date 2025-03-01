@@ -31,6 +31,193 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromInNombre"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/calcPromPlaceholderNombre"
+                android:textSize="@dimen/tamInput"
+                android:maxLength="50"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbNota1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromLbNota1"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtNota1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/calcPromPhNota1"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbNota2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromLbNota2"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtNota2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/calcPromPhNota2"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbNota3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromLbNota3"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtNota3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/calcPromPhNota3"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbNota4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromLbNota4"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtNota4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/calcPromPhNota4"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbNota5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromLbNota5"
+                android:textSize="@dimen/tamLabel"/>
+
+            <EditText
+                android:id="@+id/txtNota5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/calcPromPhNota5"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcular" />
+            <Button
+                android:id="@+id/btnBorrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/borrar"
+                android:layout_marginStart="@dimen/marginFormControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbPromedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromLbPromedio"
+                android:textSize="@dimen/tamLabel" />
+
+            <EditText
+                android:id="@+id/txtPromedio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/calcPromVacio"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/paddingFormControl">
+            <TextView
+                android:id="@+id/lbEstApro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calcPromLbEstadoAprobacion"
+                android:textSize="@dimen/tamLabel" />
+
+            <EditText
+                android:id="@+id/txtEstApro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/calcPromVacio"
+                android:textSize="@dimen/tamInput"
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
