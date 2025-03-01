@@ -13,4 +13,6 @@
     <string name="calcSalVacio">...</string>
     <string name="calcular">Calcular</string>
     <string name="borrar">Borrar</string>
+    <!-- Calculo de promedio -->
+    <string name="calcPromTitulo">Promedio de notas</string>
 </resources>
