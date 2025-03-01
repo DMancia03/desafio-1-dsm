@@ -75,23 +75,24 @@
                 android:textSize="@dimen/tamInput"/>
         </LinearLayout>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/paddingFormControl"
-            android:gravity="center">
+            android:padding="@dimen/paddingFormControl">
             <Button
                 android:id="@+id/btnCalcular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/calcular" />
+                android:text="@string/calcular"
+                android:layout_columnWeight="1"/>
             <Button
                 android:id="@+id/btnBorrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/borrar"
-                android:layout_marginStart="@dimen/marginFormControl"/>
-        </LinearLayout>
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:layout_columnWeight="1"/>
+        </GridLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

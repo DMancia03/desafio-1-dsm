@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-lateinit var btnCalculoSalario: Button
-lateinit var btnCalculoPromedio: Button
-lateinit var btnCalculadora: Button
-
 class MainActivity : AppCompatActivity() {
+    private lateinit var btnCalculoSalario: Button
+    private lateinit var btnCalculoPromedio: Button
+    private lateinit var btnCalculadora: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

@@ -11,17 +11,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-lateinit var txtNombre : EditText
-lateinit var txtSalarioBase : EditText
-lateinit var txtRenta : EditText
-lateinit var txtAFP : EditText
-lateinit var txtISSS : EditText
-lateinit var txtSalarioNeto : EditText
-
-lateinit var btnCalcular : Button
-lateinit var btnBorrar : Button
-
 class CalculoSalario : AppCompatActivity() {
+    private lateinit var txtNombre : EditText
+    private lateinit var txtSalarioBase : EditText
+    private lateinit var txtRenta : EditText
+    private lateinit var txtAFP : EditText
+    private lateinit var txtISSS : EditText
+    private lateinit var txtSalarioNeto : EditText
+
+    private lateinit var btnCalcular : Button
+    private lateinit var btnBorrar : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

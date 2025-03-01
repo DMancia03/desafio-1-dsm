@@ -156,44 +156,68 @@
                 android:layout_marginStart="@dimen/marginFormControl"/>
         </LinearLayout>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/paddingFormControl"
-            android:gravity="center">
+            android:padding="@dimen/paddingFormControl">
             <Button
                 android:id="@+id/btnCalcular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/calcular" />
+                android:text="@string/calcular"
+                android:layout_columnWeight="1"/>
             <Button
                 android:id="@+id/btnBorrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/borrar"
-                android:layout_marginStart="@dimen/marginFormControl"/>
-        </LinearLayout>
+                android:layout_marginStart="@dimen/marginFormControl"
+                android:layout_columnWeight="1"/>
+        </GridLayout>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/paddingFormControl">
-            <TextView
-                android:id="@+id/lbPromedio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/calcPromLbPromedio"
-                android:textSize="@dimen/tamLabel" />
+            <LinearLayout
+                android:layout_columnWeight="1">
+                <TextView
+                    android:id="@+id/lbPromedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calcPromLbPromedio"
+                    android:textSize="@dimen/tamLabel" />
 
-            <EditText
-                android:id="@+id/txtPromedio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/calcPromVacio"
-                android:textSize="@dimen/tamInput"
+                <EditText
+                    android:id="@+id/txtPromedio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/calcPromVacio"
+                    android:textSize="@dimen/tamInput"
+                    android:layout_marginStart="@dimen/marginFormControl"
+                    android:enabled="false"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_marginStart="@dimen/marginFormControl"
-                android:enabled="false"/>
-        </LinearLayout>
+                android:layout_columnWeight="1">
+                <TextView
+                    android:id="@+id/lbNotaFinal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calcPromLbNotaFinal"
+                    android:textSize="@dimen/tamLabel" />
+
+                <EditText
+                    android:id="@+id/txtNotaFinal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/calcPromVacio"
+                    android:textSize="@dimen/tamInput"
+                    android:layout_marginStart="@dimen/marginFormControl"
+                    android:enabled="false"/>
+            </LinearLayout>
+        </GridLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

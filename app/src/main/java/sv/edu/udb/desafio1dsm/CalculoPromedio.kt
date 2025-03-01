@@ -18,6 +18,7 @@ class CalculoPromedio : AppCompatActivity() {
     private lateinit var txtNota4 : EditText
     private lateinit var txtNota5 : EditText
     private lateinit var txtPromedio : EditText
+    private lateinit var txtNotaFinal : EditText
     private lateinit var txtEstApro : EditText
 
     private lateinit var btnCalcular : Button
@@ -51,6 +52,7 @@ class CalculoPromedio : AppCompatActivity() {
         txtNota4 = findViewById(R.id.txtNota4)
         txtNota5 = findViewById(R.id.txtNota5)
         txtPromedio = findViewById(R.id.txtPromedio)
+        txtNotaFinal = findViewById(R.id.txtNotaFinal)
         txtEstApro = findViewById(R.id.txtEstApro)
 
         btnCalcular = findViewById(R.id.btnCalcular)
