@@ -11,26 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
         <TextView
             android:id="@+id/lbTitulo"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dashboard" />
+            android:text="Dashboard de Cálculos"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="32dp" />
 
         <Button
             android:id="@+id/btnCalculoSalario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculo Salarial" />
+            android:text="Calculo Salarial"
+            android:layout_marginBottom="16dp"/>
 
         <Button
             android:id="@+id/btnCalculoPromedio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculo Promedio Estudiante" />
+            android:text="Calculo Promedio Estudiante"
+            android:layout_marginBottom="16dp"/>
 
         <Button
             android:id="@+id/btnCalculadora"

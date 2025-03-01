@@ -2,6 +2,7 @@ package sv.edu.udb.desafio1dsm
 
 import android.os.Bundle
 import android.text.Editable
+import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -29,6 +30,14 @@ class CalculoSalario : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val btnPrincipal = findViewById<Button>(R.id.btnPrincipal)
+
+        btnPrincipal.setOnClickListener {
+            // Crear un Intent para regresar a la MainActivity
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         // Inicializar
@@ -80,4 +89,5 @@ class CalculoSalario : AppCompatActivity() {
         txtISSS.setText("")
         txtSalarioNeto.setText("")
     }
+
 }
