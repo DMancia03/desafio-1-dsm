@@ -70,28 +70,43 @@ class CalculoPromedio : AppCompatActivity() {
         val stringNota4 = txtNota4.text.toString()
         val stringNota5 = txtNota5.text.toString()
 
-        val lista : List<String> = listOf(stringNota1, stringNota2, stringNota3, stringNota4, stringNota5)
+        val notasString : Array<String> = arrayOf(stringNota1, stringNota2, stringNota3, stringNota4, stringNota5)
 
-        var listaNotas : MutableList<Double> = mutableListOf()
+        var notas : Array<Double> = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
+        var notasPonderadas : Array<Double> = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
+
+        val notasPorcentaje : Array<Double> = arrayOf(0.15, 0.15, 0.2, 0.25, 0.25)
+
+        val notaMaxima : Double = 10.0
+        val notaMinima : Double = 0.0
+        val notaMinimaAprobar : Double = 6.0
 
         if(nombre.isEmpty() || nombre.isBlank()){
             Toast.makeText(this, "Debes ingresar tu nombre", Toast.LENGTH_SHORT).show()
             return
         }
 
-        for(l in lista){
-            if(l.isEmpty() || l.isBlank()){
-                Toast.makeText(this, "Debes ingresar las 5 notas", Toast.LENGTH_SHORT).show()
+
+        for(index in notasString.indices){
+            val nota : String = notasString[index]
+
+            if(nota.isEmpty() || nota.isBlank()){ // No ha ingresado nota
+                Toast.makeText(this, "Debes ingresar tu nota ${(index+1).toString()}", Toast.LENGTH_SHORT).show()
                 return
-            }else{
-                listaNotas.add(l.toDouble())
+            }
+            else if(nota.toDouble() < notaMinima || nota.toDouble() > notaMaxima){ // La nota esta fuera de los limites establecidos
+                Toast.makeText(this, "Debes ingresar una nota ${(index+1).toString()} con valor entre 0 y 10", Toast.LENGTH_SHORT).show()
+                return
+            }
+            else{ // Guardar nota valida
+                notas[index] = nota.toDouble()
+                notasPonderadas[index] = nota.toDouble() * notasPorcentaje[index]
             }
         }
 
-        val promedioNotas = listaNotas.average()
-
-        txtPromedio.setText(promedioNotas.toString())
-        txtEstApro.setText( if (promedioNotas >= 6) "¡Felicidades! ${nombre} aprobaste el ciclo" else "Lo lamento ${nombre} no lograste aprobar el ciclo" )
+        txtPromedio.setText(notas.average().toString())
+        txtNotaFinal.setText(notasPonderadas.sum().toString())
+        txtEstApro.setText( if (notasPonderadas.sum() >= notaMinimaAprobar) "¡Felicidades! ${nombre} aprobaste el ciclo" else "Lo lamento ${nombre} reprobaste el ciclo" )
     }
 
     fun  Borrar(){
@@ -102,6 +117,7 @@ class CalculoPromedio : AppCompatActivity() {
         txtNota4.setText("")
         txtNota5.setText("")
         txtPromedio.setText("")
+        txtNotaFinal.setText("")
         txtEstApro.setText("")
     }
 }

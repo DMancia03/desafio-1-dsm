@@ -1,7 +1,6 @@
 package sv.edu.udb.desafio1dsm
 
 import android.os.Bundle
-import android.text.Editable
 import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
@@ -10,6 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import sv.edu.udb.desafio1dsm.utils.SalarioUtils
+import java.math.BigDecimal
 
 class CalculoSalario : AppCompatActivity() {
     private lateinit var txtNombre : EditText
@@ -52,7 +53,7 @@ class CalculoSalario : AppCompatActivity() {
         btnBorrar = findViewById(R.id.btnBorrar)
 
         btnCalcular.setOnClickListener { Calcular() }
-        btnBorrar.setOnClickListener { borrar() }
+        btnBorrar.setOnClickListener { Borrar() }
     }
 
     fun Calcular(){
@@ -60,20 +61,30 @@ class CalculoSalario : AppCompatActivity() {
         val stringSalarioBase : String = txtSalarioBase.text.toString()
 
         if(nombre.isEmpty() || nombre.isBlank()) {
-            Toast.makeText(this, "Debe ingresar su nombre...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Debes ingresar tu nombre", Toast.LENGTH_SHORT).show()
             return
         }
 
         if(stringSalarioBase.isEmpty() || stringSalarioBase.isBlank()) {
-            Toast.makeText(this, "Debe ingresar su salario base...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Debes ingresar tu salario base", Toast.LENGTH_SHORT).show()
             return
         }
 
-        var salarioBase : Double = stringSalarioBase.toDoubleOrNull() ?: 0.0
-        var renta : Double = 0.0
-        var afp : Double = 0.0
-        var isss : Double = 0.0
-        var salarioNeto : Double = 0.0
+        if (stringSalarioBase.toDouble() < 0){
+            Toast.makeText(this, "Debe ingresar un salario con valor mayor a 0", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Salario base
+        val salarioBase : BigDecimal = stringSalarioBase.toBigDecimalOrNull() ?: 0.0.toBigDecimal()
+
+        // Descuentos
+        val afp : BigDecimal = SalarioUtils.CalcularDescuentoAfp(salarioBase)
+        val isss : BigDecimal = SalarioUtils.CalcularDescuentoIsss(salarioBase)
+        val renta : BigDecimal = SalarioUtils.CalcularDescuentoRenta(salarioBase, afp, isss)
+
+        // Salario neto
+        val salarioNeto : BigDecimal = SalarioUtils.CalcularSalarioNeto(salarioBase, afp, isss, renta)
 
         txtRenta.setText("$ " + renta.toString())
         txtAFP.setText("$ " + afp.toString())
@@ -81,7 +92,7 @@ class CalculoSalario : AppCompatActivity() {
         txtSalarioNeto.setText("$ " + salarioNeto.toString())
     }
 
-    fun borrar(){
+    fun Borrar(){
         txtNombre.setText("")
         txtSalarioBase.setText("")
         txtRenta.setText("")
@@ -89,5 +100,4 @@ class CalculoSalario : AppCompatActivity() {
         txtISSS.setText("")
         txtSalarioNeto.setText("")
     }
-
 }
