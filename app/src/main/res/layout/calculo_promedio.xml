@@ -34,13 +34,19 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/btnPrincipal"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu Principal"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/paddingFormControl">
+            <Button
+                android:id="@+id/btnPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu Principal" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

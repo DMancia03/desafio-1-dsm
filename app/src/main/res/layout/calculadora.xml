@@ -29,17 +29,99 @@
                 android:textStyle="bold"/>
         </LinearLayout>
 
+
+        <EditText
+            android:id="@+id/operando1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Operando 1"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/operando2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Operando 2"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/operando1"
+            android:layout_marginTop="16dp" />
+
+        <!-- Botones para cada operación -->
+        <Button
+            android:id="@+id/btnSuma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suma"
+            android:layout_below="@id/operando2"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnResta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resta"
+            android:layout_below="@id/btnSuma"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnMultiplicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplicación"
+            android:layout_below="@id/btnResta"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnDivision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="División"
+            android:layout_below="@id/btnMultiplicacion"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnExponente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exponente"
+            android:layout_below="@id/btnDivision"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnRaizCuadrada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Raíz Cuadrada"
+            android:layout_below="@id/btnExponente"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultado: "
+            android:layout_below="@id/btnRaizCuadrada"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/btnPrincipal"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu Principal"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/paddingFormControl">
+
+            <Button
+                android:id="@+id/btnPrincipal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu Principal" />
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
